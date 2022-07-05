@@ -1,12 +1,21 @@
-# xv
-http://xv202207.top
+# 回家地址
 
-http://xv202208.top
+http://xvdizhi.com
 
-http://xv202209.top
 
-http://xv202210.top
 
-http://xv202211.top
+# 最新地址
 
-http://xv202212.top
+http://xvideos202205.xyz
+
+http://xvideos202206.xyz
+
+http://xvideos202207.xyz
+
+http://xvideos202208.xyz
+
+http://xvideos202209.xyz
+
+http://xv202202.xyz
+
+http://xv202203.xyz
