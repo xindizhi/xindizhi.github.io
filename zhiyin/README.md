@@ -4,25 +4,17 @@ http://知阴.com
 
 http://zydizhi.com
 
-https://xindizhi.github.io/zhiyin/
 
-https://github.com/xindizhi/xindizhi.github.io/tree/main/zhiyin
-
-https://bitbucket.org/xindizhi/zhiyin
-
-https://xindizhi.bitbucket.io/zhiyin/
 
 
 
 # 最新地址
-http://xv202207.top
+http://zhiyin202205.xyz
 
-http://xv202208.top
+http://zhiyin202206.xyz
 
-http://xv202209.top
+http://zhiyin202207.xyz
 
-http://xv202210.top
+http://zhiyin202208.xyz
 
-http://xv202211.top
-
-http://xv202212.top
+http://zhiyin202209.xyz
