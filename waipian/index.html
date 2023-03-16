@@ -3,6 +3,7 @@
 <title>歪片星球最新地址_歪片星球APP下载_歪片APP</title>
 <meta name="description" content="歪片星球最新地址，歪片星球APP最新下载地址、歪片APP下载地址、歪片星球影视APP、歪片星球客户端官方下载地址 歪片星球.com WaiPianXingQiu.com 歪片.com WaiPian5.com WaiPian6.com WaiPian7.com WaiPian8.com">
 <link rel="shortcut icon" href="favicon.ico" />
+<script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-2-y/jquery/3.6.0/jquery.js"></script>
 
 <script>
 var _hmt = _hmt || [];
@@ -91,5 +92,40 @@ var _hmt = _hmt || [];
   <button class="discord-btn">Discord群</button>
   <style>.discord-btn {position: fixed;bottom: 0rem;right: 0rem;background-color: #5865F2;padding: 1.5rem;height: auto;color: white;text-align: right;vertical-align: middle;border: none;font-size: 1.5rem;border-radius: 4px;}.discord-btn svg {height: 1.5rem;position: absolute;top: 50%;left: 0;transform: translateY(-50%);}.discord-btn:hover svg{animation:discord-wave 560ms ease-in-out;}@keyframes discord-wave{0%,100%{transform:translateY(-50%) rotate(0)}20%,60%{transform:translateY(-50%) rotate(-25deg)}40%,80%{transform:translateY(-50%) rotate(10deg)}}@media (max-width:500px){.discord-btn:hover svg{animation:none}.discord-btn svg{animation:discord-wave 560ms ease-in-out}}</style>
 </a>
+
+<script>
+  var ping = 1;
+  setInterval("ping++", 1);
+
+  function test (i) {
+    $("span[speed]").each(function (x) {
+      if (i === x) {
+        var str ="较慢"
+        if (ping<300){
+            $(this).css("color","green")
+            str ="极快"
+        }
+        if (ping>300 && ping<500){
+            $(this).css("color","#00FF00")
+            str ="较快"
+        }
+        if (ping>500 ){
+            $(this).css("color","#666666")
+        }
+        $(this).text(""+str+"")
+        // $(this).text(""+str+"" + "(" + ping * 1 + "ms)") 包含延时
+        //ping=1;
+      }
+    });
+  }
+  $(function () {
+    $("span[speed]").each(function (i) {
+      var sortid = $(this).attr("speed");
+      var self = $(this);
+      self.append('<img src="' + sortid + '?' + Math.random() + '" width="1" height="1" style="display:none" onerror=test(' + i + ') >')
+    });
+  });
+</script>
+  
 </body>
 </html>
