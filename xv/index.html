@@ -90,40 +90,6 @@ var _hmt = _hmt || [];
         <s style="color:gray">https://xvav.xyz</s><br>
 </div>
 
-<script>
-  var ping = 1;
-  setInterval("ping++", 1);
-
-  function test (i) {
-    $("span[speed]").each(function (x) {
-      if (i === x) {
-        var str ="较慢"
-        if (ping<300){
-            $(this).css("color","green")
-            str ="极快"
-        }
-        if (ping>300 && ping<500){
-            $(this).css("color","#00FF00")
-            str ="较快"
-        }
-        if (ping>500 ){
-            $(this).css("color","#666666")
-        }
-        $(this).text(""+str+"")
-        // $(this).text(""+str+"" + "(" + ping * 1 + "ms)") 包含延时
-        //ping=1;
-      }
-    });
-  }
-  $(function () {
-    $("span[speed]").each(function (i) {
-      var sortid = $(this).attr("speed");
-      var self = $(this);
-      self.append('<img src="' + sortid + '?' + Math.random() + '" width="1" height="1" style="display:none" onerror=test(' + i + ') >')
-    });
-  });
-</script>
-</div>
 
 <hr />
 <p>回家地址 1.1 → <a target="_blank" href="https://HuiJiaDiZhi.com">https://HuiJiaDiZhi.com</a> <span speed="https://HuiJiaDiZhi.com">测速中</span></p>
@@ -143,6 +109,46 @@ var _hmt = _hmt || [];
 <p>主站 (国内访问无法访问) → <a target="_blank" href="https://app.CAVhot.com">https://app.CAVhot.com</a> <span speed="https://app.CAVhot.com">测速中</span></p>
 <hr />
 
+
+<script>
+  var ping = 1;
+  setInterval("ping++", 1);
+
+  function test (i) {
+    $("span[speed]").each(function (x) {
+      if (i === x) {
+        $(this).css("color","#f0f0f0")
+        var str ="9暂无结果，请稍后刷新重测"
+        if (ping<200){
+            $(this).css("color","red")
+            str ="1极快"
+        }
+        if (ping>300 && ping<500){
+            $(this).css("color","#efc562")
+            str ="2较快"
+        }
+        if (ping>500 && ping<3000 ){
+            $(this).css("color","#9a9a9a")
+            str ="3较慢"
+        }
+        if (ping>4000 ){
+            $(this).css("color","#f0f0f0")
+            str ="4疑似无法访问，刷新本页可重测"
+        }
+        $(this).text(""+str+"")
+        // $(this).text(""+str+"" + "(" + ping * 1 + "ms)") 包含延时
+        //ping=1;
+      }
+    });
+  }
+  $(function () {
+    $("span[speed]").each(function (i) {
+      var sortid = $(this).attr("speed");
+      var self = $(this);
+      self.append('<img src="' + sortid + '?' + Math.random() + '" width="1" height="1" style="display:none" onerror=test(' + i + ') >')
+    });
+  });
+</script>
 
 <script type="text/javascript">document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1279874531'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D1279874531' type='text/javascript'%3E%3C/script%3E"));</script>
 <br><br><br><br>
