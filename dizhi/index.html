@@ -15,39 +15,6 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-<script>
-  var ping = 1;
-  setInterval("ping++", 1);
-
-  function test (i) {
-    $("span[speed]").each(function (x) {
-      if (i === x) {
-        var str ="较慢"
-        if (ping<300){
-            $(this).css("color","green")
-            str ="极快"
-        }
-        if (ping>300 && ping<500){
-            $(this).css("color","#00FF00")
-            str ="较快"
-        }
-        if (ping>500 ){
-            $(this).css("color","#666666")
-        }
-        $(this).text(""+str+"")
-        // $(this).text(""+str+"" + "(" + ping * 1 + "ms)") 包含延时
-        //ping=1;
-      }
-    });
-  }
-  $(function () {
-    $("span[speed]").each(function (i) {
-      var sortid = $(this).attr("speed");
-      var self = $(this);
-      self.append('<img src="' + sortid + '?' + Math.random() + '" width="1" height="1" style="display:none" onerror=test(' + i + ') >')
-    });
-  });
-</script>
 
 </head>
 <body style="font-size:auto">
@@ -88,7 +55,7 @@ var _hmt = _hmt || [];
 <div id="xv">
 <p><a target="_blank" href="https://xvdizhi.com/?huijiadizhi.com"><img src="xvlogo.png" /></a></p>
 <p><a href="#xv">XVideos 中国大陆专线</a></p>
-<p>XV地址 → <a target="_blank" href="https://xvdizhi.com/?huijiadizhi.com">https://xvdizhi.com</a>< <span speed="https://xvdizhi.com/">测速中</span>/p>
+<p>XV地址 → <a target="_blank" href="https://xvdizhi.com/?huijiadizhi.com">https://xvdizhi.com</a> <span speed="https://xvdizhi.com/">测速中</span></p>
 <p>地址 1 → <a target="_blank" href="https://x202301.top/">https://x202301.top</a> <span speed="https://x202301.xyz/">测速中</span></p>
 <p>地址 2 → <a target="_blank" href="https://x202302.top/">https://x202302.top</a> <span speed="https://x202302.xyz/">测速中</span></p>
 <p>地址 3 → <a target="_blank" href="https://x202303.top/">https://x202303.top</a> <span speed="https://x202303.xyz/">测速中</span></p>
