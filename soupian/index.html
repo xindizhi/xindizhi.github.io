@@ -47,17 +47,23 @@ Ctrl+D 收藏本页面到浏览器，永不迷路，永不被封！
   function test (i) {
     $("span[speed]").each(function (x) {
       if (i === x) {
-        var str ="较慢"
-        if (ping<300){
-            $(this).css("color","green")
-            str ="极快"
+        $(this).css("color","#f0f0f0")
+        var str ="9暂无结果，请稍后刷新重测"
+        if (ping<200){
+            $(this).css("color","red")
+            str ="1极快"
         }
         if (ping>300 && ping<500){
-            $(this).css("color","#00FF00")
-            str ="较快"
+            $(this).css("color","#efc562")
+            str ="2较快"
         }
-        if (ping>500 ){
-            $(this).css("color","#666666")
+        if (ping>500 && ping<3000 ){
+            $(this).css("color","#9a9a9a")
+            str ="3较慢"
+        }
+        if (ping>4000 ){
+            $(this).css("color","#f0f0f0")
+            str ="4疑似无法访问，刷新本页可重测"
         }
         $(this).text(""+str+"")
         // $(this).text(""+str+"" + "(" + ping * 1 + "ms)") 包含延时
