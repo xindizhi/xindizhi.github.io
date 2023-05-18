@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>老司机浏览器 | LaoSiJi.App</title>
+    <style>
+         body{margin:0;padding: 0;overflow-x: hidden}
+        .text-view{display: -webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp: 1;overflow: hidden;}
+        .page{width: 100vw;height: 100vh;font-size: 14px;margin:0;padding: 0;display: flex;align-items: center;justify-content: center}
+        /*手机界面*/
+         @media screen and (max-width: 1200px){
+             .content{background-image:url('./bg.jpg');width: 100%;height: 100%;background-repeat: no-repeat;background-size:cover;display: flex;flex-direction: column;align-items: center;}
+             .top{margin:64px 0 0 0;display: flex;align-items: center;flex-direction: column;justify-items: center;width: 100%;}
+             .top>img{width: 50%;height: auto}
+             .content{ animation: content 32s linear infinite;display: flex}
+             .center{width: 100vw;height:auto;display: flex;justify-items: center;align-items: center;flex-direction: column;}
+             .center>img{width: 80%;height: auto;max-width: 800px;}
+             .android{width:80%;height: auto;text-decoration:none;margin-top: 16px}
+             .ios{width:80%;height: auto;opacity: 0.85}
+             .bottom-view{display: -webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp: 1;white-space: nowrap;overflow: hidden;padding:32px 0 32px 0;font-size: 24px;font-weight: bold;color: white;letter-spacing: 8px;user-select:none;}
+             .bottom-content{display: flex;flex-direction: column;align-items: center;width: 80%;}
+             .qrcode{display: none}
+             .android-a{margin:32px 0;text-decoration:none;padding:8px;display: flex;justify-content: center;align-items: center;height: 20px;opacity: 0.85;text-align: center}
+             .p-view{font-size: 30px;color:deepskyblue;font-weight:bold;letter-spacing: 2px;user-select:none;text-decoration:none;}
+             .content-a{display: flex;align-items: center;flex-direction: column;height: 100vh;justify-content: space-between}
+             .bottom{display: flex;align-items: center;flex-direction: column;width: 100%;margin-bottom: 120px;justify-content: space-between}
+            }
+         /*PC界面*/
+        @media screen and (min-width: 1200px){
+            .content{background-image:url('./bg.jpg');width: 100%;height: 100%;background-repeat: no-repeat;background-size:cover;animation: content 16s linear infinite;}
+            .content-a{display: flex;justify-content: space-between;align-items: center;height: 100%;width: 100%}
+            .top{position: absolute;top: 16px;left: 64px}
+            .top>img{width: 310px;height: 72px;max-width: 310px}
+            .center{position: absolute;left: 64px;width: 100vw;}
+            .center>img{width: 56%;height: auto;max-width: 1000px;}
+            .bottom{display: flex;align-items: center;flex-direction: column;justify-content: center; position: absolute;right: 64px;bottom:0;width: 30%;top: 0;}
+            .qrcode{width: 40%;height: auto;margin-bottom: 32px;max-width:280px;}
+            .android{margin:16px 0;width:80%;height:auto;text-decoration:none;}
+            .android-a{text-decoration:none;padding:8px;display: flex;justify-content: center;align-items: center;
+                height: 20px;opacity: 0.85;text-align: center;margin: 24px 0 64px 0;}
+            .ios{width:80%;height:auto;opacity: 0.4}
+            .bottom-view{display: -webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp: 1;white-space: nowrap;
+                overflow: hidden;font-size: 20px;font-weight: bold;color: white;letter-spacing: 8px;user-select:none;}
+            .bottom-content{display: flex;flex-direction: column;align-items: center;height: 40%;justify-content: center}
+            .p-view{font-size: 18px;color:deepskyblue;font-weight:bold;letter-spacing: 2px;user-select:none;}
+            }
+         @keyframes content {
+             0% {background-position: 0% 50%;}
+             50% {background-position: 100% 50%;}
+             100% { background-position: 0% 50%;}
+         }
+    </style>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NFRGSYT5DY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NFRGSYT5DY');
+</script>
+
+</head>
+<body>
+<div class="page" style="position: relative">
+    <div class="content-a" style="width: 100%;position: absolute;z-index: 2000">
+        <div class="top">
+                <img src="./logo.png" alt="" draggable="false">
+            </div>
+        <div class="center">
+                <img src="./title.png" alt="" draggable="false">
+            </div>
+        <div class="bottom" >
+            <img class="qrcode" src="./qrcode.png"  alt="" draggable="false">
+            <div class="bottom-content" >
+                <a class="ios">
+                    <img style="width: 100%;user-select:none;" src="./ios.png" alt=""/>
+                </a>
+                <a class="android" href="https://at.umtrack.com/zqW1fi?cid=483">
+                    <img style="width: 100%;user-select:none;" src="./android.png" alt=""/>
+                </a>
+                <div style="display: flex;justify-content: space-between;align-items: center;width: 90%">
+                    <a class="android-a" href="/com.lsj.browser_v1.0.1-2.apk">
+                        <div class="text-view p-view">线路二</div>
+                    </a>
+                    <a class="android-a" href="https://lsj-app1.oss-cn-hongkong.aliyuncs.com/com.lsj.browser_v1.0.1_2.apk">
+                        <div class="text-view p-view">线路三</div>
+                    </a>
+                    <a class="android-a" href="https://lsj-app1.oss-cn-hongkong.aliyuncs.com/com.lsj.browser_v1.0.1_2.apk">
+                        <div class="text-view p-view">线路四</div>
+                    </a>
+                </div>
+                <div class="bottom-view">视频影视免费看，直播主播免费播</div>
+            </div>
+        </div>
+    </div>
+    <div class="content"  style="position: fixed;left: 0;right: 0;top: 0;bottom: 0"></div>
+</div>
+</body>
+</html>
