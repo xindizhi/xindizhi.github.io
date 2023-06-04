@@ -22,9 +22,9 @@
              .bottom-content{display: flex;flex-direction: column;align-items: center;width: 80%;}
              .qrcode{display: none}
              .android-a{margin:32px 0;text-decoration:none;padding:8px;display: flex;justify-content: center;align-items: center;height: 20px;opacity: 0.85;text-align: center}
-             .p-view{font-size: 30px;color:deepskyblue;font-weight:bold;letter-spacing: 2px;user-select:none;text-decoration:none;}
+             .p-view{font-size: 32px;color:#ffffff;font-weight:bold;letter-spacing: 2px;user-select:none;padding: 8px 24px;background: orange;border-radius: 32px;}
              .content-a{display: flex;align-items: center;flex-direction: column;height: 100vh;justify-content: space-between}
-             .bottom{display: flex;align-items: center;flex-direction: column;width: 100%;margin-bottom: 120px;justify-content: space-between}
+             .bottom{display: flex;align-items: center;flex-direction: column;width: 100%;margin-bottom:30%;justify-content: space-between}
             }
          /*PC界面*/
         @media screen and (min-width: 1200px){
@@ -35,15 +35,15 @@
             .center{position: absolute;left: 64px;width: 100vw;}
             .center>img{width: 56%;height: auto;max-width: 1000px;}
             .bottom{display: flex;align-items: center;flex-direction: column;justify-content: center; position: absolute;right: 64px;bottom:0;width: 30%;top: 0;}
-            .qrcode{width: 40%;height: auto;margin-bottom: 32px;max-width:280px;}
-            .android{margin:16px 0;width:80%;height:auto;text-decoration:none;}
+            .qrcode{width: 60%;height: auto;margin-bottom: 32px;max-width:320px;}
+            .android{margin-top:16px;width:80%;height:auto;text-decoration:none;}
             .android-a{text-decoration:none;padding:8px;display: flex;justify-content: center;align-items: center;
-                height: 20px;opacity: 0.85;text-align: center;margin: 24px 0 64px 0;}
+                height: 20px;opacity: 0.85;text-align: center;margin:0 0 16px 0;}
             .ios{width:80%;height:auto;opacity: 0.4}
             .bottom-view{display: -webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp: 1;white-space: nowrap;
-                overflow: hidden;font-size: 20px;font-weight: bold;color: white;letter-spacing: 8px;user-select:none;}
-            .bottom-content{display: flex;flex-direction: column;align-items: center;height: 40%;justify-content: center}
-            .p-view{font-size: 18px;color:deepskyblue;font-weight:bold;letter-spacing: 2px;user-select:none;}
+                overflow: hidden;font-size: 20px;font-weight: bold;color: white;letter-spacing: 5px;user-select:none;}
+            .bottom-content{display: flex;flex-direction: column;align-items: center;justify-content: center}
+            .p-view{font-size: 18px;color:#ffffff;font-weight:bold;letter-spacing: 2px;user-select:none;padding: 8px 16px;background: orange;border-radius: 20px;}
             }
          @keyframes content {
              0% {background-position: 0% 50%;}
@@ -79,20 +79,29 @@
                 <a class="ios">
                     <img style="width: 100%;user-select:none;" src="./ios.png" alt=""/>
                 </a>
-                <a class="android" href="https://at.umtrack.com/zqW1fi?cid=483">
+                <a class="android" href="https://xindizhi.github.io/lsj/com.lsj.browser_other_v1.1.1_4.apk">
                     <img style="width: 100%;user-select:none;" src="./android.png" alt=""/>
                 </a>
-                <div style="display: flex;justify-content: space-between;align-items: center;width: 90%">
-                    <a class="android-a" href="com.lsj.browser_v1.0.1_2.apk">
-                        <div class="text-view p-view">本地下载</div>
-                    </a>
-                    <a class="android-a" href="https://xindizhi.github.io/lsj/com.lsj.browser_v1.0.1_2.apk">
-                        <div class="text-view p-view">海外线路</div>
-                    </a>
-                    <a class="android-a" href="https://lsj-dl.oss-cn-hongkong.aliyuncs.com/com.lsj.browser_v1.0.1_2.apk">
-                        <div class="text-view p-view">备用地址</div>
-                    </a>
-                </div>
+                <a class="android" href="https://lsj-dl.oss-cn-hongkong.aliyuncs.com/com.lsj.browser_other_v1.1.1_4.apk">
+                    <img style="width: 100%;user-select:none;" src="./android-1.png" alt=""/>
+                </a>
+                <a class="android" href="https://lsj-app.oss-cn-hongkong.aliyuncs.com/com.lsj.browser_other_v1.1.1_4.apk">
+                    <img style="width: 100%;user-select:none;" src="./android-2.png" alt=""/>
+                </a>
+                <a class="android" href="/com.lsj.browser_other_v1.1.1_4.apk">
+                    <img style="width: 100%;user-select:none;" src="./android-3.png" alt=""/>
+                </a>
+<!--                <div style="display: flex;justify-content: space-between;align-items: center;width: 80%">-->
+<!--                    <a class="android-a" href="com.lsj.browser_other_v1.1.0_3.apk">-->
+<!--                        <div class="text-view p-view">本地下载</div>-->
+<!--                    </a>-->
+<!--                    <a class="android-a" href="https://xindizhi.github.io/lsj/com.lsj.browser_other_v1.1.0_3.apk">-->
+<!--                        <div class="text-view p-view">海外线路</div>-->
+<!--                    </a>-->
+<!--                    <a class="android-a" href="https://lsj-dl.oss-cn-hongkong.aliyuncs.com/com.lsj.browser_other_v1.1.0_3.apk">-->
+<!--                        <div class="text-view p-view">备用地址</div>-->
+<!--                    </a>-->
+<!--                </div>-->
                 <div class="bottom-view">视频影视免费看，直播主播免费播</div>
             </div>
         </div>
