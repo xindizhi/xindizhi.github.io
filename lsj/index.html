@@ -6,70 +6,55 @@
     <title>老司机浏览器 | LaoSiJi.App</title>
     <style>
       
-      
         ul, li {margin: 0;padding: 0;list-style: none;}
         .tab:after{content: '';display:block;clear:both;}
         a{text-decoration: none;}
         /*!*手机界面*!*/
-        @media screen and (max-width: 1000px){
-              body{width:100vw;height:100vh;margin:0;padding: 0;display: flex;justify-content: center;align-items: center;
-      background-image: url("bg2.jpg");background-size: 100%  30%;background-repeat: repeat;overflow: hidden}
-            .page{overflow: hidden;width: 100%;height:100%;font-size: 14px;margin:0;padding: 0;display: flex;z-index: 3000;
-                align-items: center;justify-content: space-between;touch-action: none;pointer-events: auto;flex-direction: column}
-            .tab{position: fixed;top: 4%;;cursor: pointer;border-bottom: 4px solid #0045d1;
-                color: #ffffff;display:flex;justify-content: space-between;font-weight: bold;font-size: 40px;width: 90%;height:72px;}
-        
-            .tab .active{background-color: #0045d1;display: flex;justify-content: center;align-items: center;color: white;height: 72px;}
-            .btn-a{width: 600px;margin: 48px 0 24px 0;display: flex;justify-content: space-between;flex-direction: column;align-items: center}
-            .btn-b{width: 600px;margin-top: 48px;display: flex;justify-content: space-between}
-            .android-m{margin: 24px 0;width: 80vw}
-            .a-text-view{display: flex;align-items: center;justify-content: center;}
-            .android{font-size:42px;margin-top:5px;height:auto;text-decoration:none;display: flex;align-items: center;
-                justify-content: center; background: linear-gradient(to bottom right, #0045d1, #111b27);;border-radius: 40px;height:100px;}
-            .android-tv {font-size:48px;margin-top:5px;height:auto;text-decoration:none;display: flex;align-items: center;
-                justify-content: center; background: linear-gradient(to bottom right, #0045d1, #111b27);;border-radius: 40px;height:100px;}
-            .android>img{width: 64px;}
-            .p-view{color:#ffffff;font-weight:bold;letter-spacing: 2px;user-select:none;border-radius: 20px;}
-            .tab-logo{margin-right:8px;user-select:none;width: 48px}
-            .info-app{font-size: 32px; color: white;user-select:none;margin-bottom: 24px;}
-            .bottom-view{display: -webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp: 1;white-space: nowrap;
-                overflow: hidden;font-size: 1.8em;font-weight: bold;color: white;letter-spacing: 5px;user-select:none;margin-top: 16px;}
-            .content{width: 100%;display: flex;justify-content: center;align-items:center;position:fixed;top:10%;}
+        @media screen and (max-width: 1200px){
+             body{min-width:100vw;min-height:100vh;margin:0;padding: 0;display: flex;justify-content: center;align-items: center; background-image: url("bg2.jpg");background-repeat: repeat;overflow-x:hidden;}
+            .page{display: flex;flex-direction: column;justify-content: center;align-items: center}
+            .tab{position:fixed;top:1%;max-width:1200px;width: 80%;height: 64px;cursor: pointer;
+                border-bottom: 4px solid #0045d1;z-index: 3000;color: #ffffff;display:flex;justify-content: space-between;
+                font-weight: bold;font-size: 1.4em;background:black;border-radius:16px 16px 0 0;}
+            .tab .active{background-color: #0045d1;display: flex;justify-content: center;align-items: center;color: white;height: 64px;border-radius: 16px 16px 0 0}
+            .tab-logo{width: 42px;height: auto;margin-right: 8px}
+             #appTab,#tvTab,#movieTab{display: flex;justify-content: center;align-items: center;flex: 1;cursor: pointer;color: white;user-select: none;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+            .content{width: 100%;display: flex;justify-content: center;align-items:center;flex-direction:column;}
             .content li{width:100%;position:absolute;display: none;}
-            .content .current{display: flex;justify-content: center;align-items: center;position:fixed;top:10%;}
-            .info-img-app{width:900px;min-height:900px; background-image: url("phone13.png");background-size: 100%  100%;background-repeat: repeat;}
-            .info-img-tv{width:100%;}
-            .info-img-movie{width:900px;min-height:900px; background-image: url("phone12.png");background-size: 100%  100%;background-repeat: repeat;}
-            .phone-text{width: 90%};
+            .content .current{display: flex;align-items: center;justify-content: center;flex-direction: column;top:140px;position: absolute;scroll-margin-top:140px}
+            .title{display: flex;align-items: center;justify-content: center;max-width: 1200px;width: 100%;user-select: none}
+            .btn-list{width: 100%;display: flex;min-width:680px;flex-direction: column;align-items: center;justify-content: center;margin:24px 0;}
+            .btn-item{display: flex;align-items: center;justify-content:center;font-size: 2.6em;font-weight: bold;color:
+                    white;background: #0045d1;border-radius: 16px;width: 80%;line-height: 20%;margin:6px 0;cursor: pointer;user-select: none}
+            .btn-item>img{width: 42px;height: auto;margin-right: 8px}
+            .info{color: white;font-size: 1em;user-select: none}
+            .link{color: white;font-size: 1.2em;text-align: center}
+            .image{display: flex;justify-content: center;margin:24px 0;width:80%;height: auto;}
+            .pc{display: none;}
+            .phone{width:100%;height: auto;}
         }
         /* !*PC界面*!*/
-        @media screen and (min-width: 1000px){
-              body{width:100vw;height:100vh;margin:0;padding: 0;display: flex;justify-content: center;align-items: center;
-      background-image: url("bg2.jpg");background-size: 100%  100%;background-repeat: repeat;overflow: hidden}
-            .page{overflow: hidden;width: 60%;height:94%;margin:0;padding: 0;display: flex;
-                align-items: center;justify-content: space-between;touch-action: none;pointer-events: auto;flex-direction: column}
-            .tab{height:6%;cursor: pointer;border-bottom: 4px solid #0045d1;z-index: 3000;color: #ffffff;display:flex;justify-content: space-between;font-weight: bold;font-size: 1.6em;width: 80%;}
-            .tab .active{background-color: #0045d1;display: flex;justify-content: center;align-items: center;color: white;height:6%;}
-            .btn-a{width: 48%;height:4%;margin:12px 0;display: flex;justify-content: space-between}
-            /*.btn-b{width: 320px;margin: 12px;display: flex;justify-content: space-between}*/
-            .p-view{color:#ffffff;font-weight:bold;letter-spacing: 2px;user-select:none;border-radius: 20px;font-size: 1.2em}
-            .a-text-view{height: 64px;display: flex;align-items: center;justify-content: center;}
-            .android{height:64px;text-decoration:none;display: flex;align-items: center;
-                justify-content: center; background: linear-gradient(to bottom right, #0045d1, #111b27);;border-radius: 40px;width: 30%;}
-            /*.android-tv {height:64px;text-decoration:none;display: flex;align-items: center;*/
-            /*    justify-content: center; background: linear-gradient(to bottom right, #0045d1, #111b27);;border-radius: 40px;width: 800px;}*/
-            .tv-l{width: 24px}
-            .tab-logo{margin-right:8px;user-select:none;width: 24px}
-            .info-app{font-size: 12px; color: white;user-select:none;margin: 8px}
-            .bottom-view{display: -webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp: 1;white-space: nowrap;
-                overflow: hidden;font-weight: bold;color: white;letter-spacing: 5px;user-select:none;font-size: 12px;}
-            .content{width: 100%;display: flex;justify-content: center;align-items:center;height: 90%;flex-direction:column;}
+        @media screen and (min-width: 1200px){
+             body{min-width:100vw;min-height:100vh;margin:0;padding: 0;display: flex;justify-content: center;align-items: center;
+            background-image: url("bg2.jpg");background-size: 50%  50%;background-repeat: repeat;overflow-x:hidden }
+            .page{width:1200px;display: flex;flex-direction: column;justify-content: center;align-items: center}
+            .tab{position:fixed;top:1%;max-width:1200px;width: 80%;height: 48px;cursor: pointer;border-bottom: 4px solid #0045d1;z-index: 3000;color: #ffffff;display:flex;justify-content: space-between;font-weight: bold;font-size: 1.4em;background:black;border-radius:16px 16px 0 0;}
+            .tab .active{background-color: #0045d1;display: flex;justify-content: center;align-items: center;color: white;height: 48px;border-radius: 16px 16px 0 0}
+            .tab-logo{width: 32px;height: auto;margin-right: 8px}
+            #appTab,#tvTab,#movieTab{display: flex;justify-content: center;align-items: center;flex: 1;cursor: pointer;color: white;user-select: none;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+            .content{width: 100%;display: flex;justify-content: center;align-items:center;flex-direction:column;}
             .content li{width:100%;position:absolute;display: none;}
-            .content .current{display: flex;align-items: center;justify-content: center;}
-            .info-img-app{width:780px;min-height:450px; background-image: url("phonep14.png");background-size: 100%  100%;background-repeat: repeat;}
-            .info-img-tv{width:45%;}
-            .info-img-movie{width:950px;min-height:367px; background-image: url("phonep15.png");background-size: 100%  100%;background-repeat: repeat;}
-            .phone-text{width: 50%};
+            .content .current{display: flex;align-items: center;justify-content: center;flex-direction: column;position:absolute;top:140px;scroll-margin-top:140px}
+            .title{display: flex;align-items: center;justify-content: center;max-width: 1200px;width: 100%;user-select: none}
+            .btn-list{width: 80%;display: flex;justify-content: space-between;max-width:1200px;}
+            .btn-item{display: flex;align-items: center;justify-content:center;font-size: 1.6em;font-weight: bold;color:
+                    white;background: #0045d1;border-radius: 16px;width: 32%;line-height: 10%;margin:24px 0;cursor: pointer;user-select: none}
+            .btn-item>img{width: 32px;height: auto;margin-right: 8px}
+            .info{color: white;font-size: 1em;user-select: none}
+            .link{color: white;font-size: 1.2em;text-align: center}
+            .image{display: flex;justify-content: center;margin:24px 0;}
+            .phone{display: none;}
+            .title{color: white;font-size: 3.8em}
         }
 
     </style>
@@ -83,120 +68,112 @@
 <body onload="rFunction()">
 <div class="page">
     <div class="tab">
-        <a href="#APP" id="appTab" class="active" style="width: 100%;height: 100%;display: flex;align-items: center;justify-content: center;color: white;border-radius:16px 16px 0 0;" >
-            <img class="tab-logo" referrerpolicy="no-referrer" src="phone-logo.png" local="phone-logo.png" alt=""/>
+        <a href="#APP" id="appTab" class="active">
+            <img class="tab-logo"  referrerpolicy="no-referrer" src="phone-logo.png" local="phone-logo.png" alt=""/>
             免费 VPN
         </a>
 
-        <a href="#TV" id="tvTab"  style="width: 100%;height: 100%;display: flex;align-items: center;justify-content: center;color: white;border-radius:16px 16px 0 0;">
+        <a href="#TV" id="tvTab">
             <img class="tab-logo" referrerpolicy="no-referrer" src="tv-logo.png" local="tv-logo.png" alt=""/>
             电视 TV
         </a>
-        <a href="#Movie" id="movieTab"  style="width: 100%;height: 100%;display: flex;align-items: center;justify-content: center;color: white;border-radius:16px 16px 0 0;">
-            <img class="tab-logo" referrerpolicy="no-referrer" src="tv-logo.png" local="tv-logo.png" alt=""/>
+        <a href="#Movie" id="movieTab">
+            <img class="tab-logo" referrerpolicy="no-referrer" src="phone-logo.png" local="tv-logo.png" alt=""/>
             影视 APP
         </a>
     </div>
     <ul class="content">
         <li class="current" name="APP" id="APP">
-            <div style="display: flex;flex-direction: column;align-items: center;justify-content: space-between;">
-               <img class="phone-text" src="phonet-1.png">
-                
-                <div class="btn-a">
-                
-                    <a class="android android-m" target="_blank" href="/d/app_v217_20240308.apk" >
-                        <img class="tv-l" style="margin-right:8px;user-select:none;" referrerpolicy="no-referrer" src="a-logo.png" local="a-logo.png" alt=""/>
-                        <div class="a-text-view">
-                            <p class="p-view">线路一下载</p>
-                        </div>
-                    </a>
-                    <a class="android android-m" target="_blank" href="https://154.88.15.99/d/app_v217_20240308.apk">
-                        <img class="tv-l" style="margin-right:8px;user-select:none;" referrerpolicy="no-referrer" src="a-logo.png" local="a-logo.png" alt=""/>
-                        <div class="a-text-view">
-                            <p class="p-view">线路二下载</p>
-                        </div>
-                    </a>
-                    <a class="android android-m" target="_blank" href="https://xindizhi.github.io/lsj/d/app_v217_20240308.apk">
-                        <img class="tv-l" style="margin-right:8px;user-select:none;" referrerpolicy="no-referrer" src="a-logo.png" local="a-logo.png" alt=""/>
-                        <div class="a-text-view">
-                            <p class="p-view">海外下载</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="info-app">v217 | 29MB | 2024-03-08</div>
-                <div  style="display: flex;justify-content: center" class="info-img-app">
-                   
-                </div>
-                <div class="bottom-view">免费科学上网，视频影视免费看</div>
-                <div class="bottom-view"><a href="https://at.umtrack.com/K5nObC?cid=483" target="_blank" style="color:yellow;text-decoration:none;">更多APP推荐&gt;&gt;</a></div>
+            <div class="title" style="display: flex;justify-content: center">
+                <img style="width: 80%" src="phonet-1.png" alt="">
+            </div>
+            <div class="btn-list">
+                <a class="btn-item" target="_blank" href="/d/app_v217_20240308.apk" >
+                    <img style="user-select:none;" referrerpolicy="no-referrer" src="a-logo.png" local="a-logo.png" alt=""/>
+                    <p>线路一下载</p>
+                </a>
+                <a class="btn-item" target="_blank" href="https://154.88.15.99/d/app_v217_20240308.apk" >
+                    <img style="margin:0 8px;user-select:none;" referrerpolicy="no-referrer" src="a-logo.png" local="a-logo.png" alt=""/>
+                    <p>线路二下载</p>
+                </a>
+                <a class="btn-item" target="_blank" href="https://xindizhi.github.io/lsj/d/app_v217_20240308.apk" >
+                    <img style="user-select:none;" referrerpolicy="no-referrer" src="a-logo.png" local="a-logo.png" alt=""/>
+                    <p>海外下载</p>
+                </a>
+            </div>
+            <div class="info">
+                v217 | 29MB | 2024-03-08
+            </div>
+            <div class="image">
+                <img class="pc" src="phonep14.png" alt="">
+                <img class="phone"  src="phone13.png" alt="">
+            </div>
+            <div class="link">
+                <div style="user-select: none">免费科学上网，视频影视免费看</div>
+                <a href="https://at.umtrack.com/K5nObC?cid=483" target="_blank" style="color:yellow;text-decoration:none;user-select: none">更多APP推荐&gt;&gt;</a>
             </div>
         </li>
         <li name="TV" id="TV">
-            <div style="display: flex;flex-direction: column;align-items: center;justify-content: space-between;">
-                <div style="font-size: 3em;font-weight: bold;color: white;user-select:none;white-space:nowrap;letter-spacing: 8px;">老司机电视TV客户端</div>
-                <div class="info-app" style="border-bottom:2px white solid;">
-                    <a style="color: white;" target="_blank"
-                       href="https://www.baidu.com/s?ie=utf-8&wd=%E6%80%8E%E4%B9%88%E5%AE%89%E8%A3%85apk%E5%88%B0%E7%94%B5%E8%A7%86">下载到U盘后，再插入电视进行安装>>
-                    </a>
-                </div>
-                <div class="btn-a">
-                    <a class="android android-m" target="_blank" href="/d/leanback-java-armeabi_v7a_v229_20240313.apk">
-                        <img class="tv-l" style="margin-right:8px;user-select:none;" referrerpolicy="no-referrer" src="tv-logo.png" local="tv-logo.png" alt=""/>
-                        <div class="a-text-view">
-                            <p class="p-view">线路一下载</p>
-                        </div>
-                    </a>
-                    <a class="android android-m" target="_blank" href="https://154.88.15.99/d/leanback-java-armeabi_v7a_v229_20240313.apk">
-                        <img class="tv-l" style="margin-right:8px;user-select:none;" referrerpolicy="no-referrer" src="tv-logo.png" local="tv-logo.png" alt=""/>
-                        <div class="a-text-view">
-                            <p class="p-view">线路二下载</p>
-                        </div>
-                    </a>
-                    <a class="android android-m" target="_blank" href="https://xindizhi.github.io/lsj/d/leanback-java-armeabi_v7a_v229_20240313.apk">
-                        <img class="tv-l" style="margin-right:8px;user-select:none;" referrerpolicy="no-referrer" src="tv-logo.png" local="tv-logo.png" alt=""/>
-                        <div class="a-text-view">
-                            <p class="p-view">海外下载</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="info-app" >V229 | 24MB | 2024-03-13</div>
-                <div style="display: flex;justify-content: center" class="info-tv">
-                    <img class="info-img-tv" src="tv.png">
-                </div>
-                <div class="bottom-view">免费科学上网，视频影视免费看</div>
-                <div class="bottom-view"><a href="https://at.umtrack.com/K5nObC?cid=483" target="_blank" style="color:yellow;text-decoration:none;">更多APP推荐&gt;&gt;</a></div>
+            <div class="title" style="display: flex;justify-content: center">
+                <img style="width: 80%" src="tvtext.png" alt="">
+            </div>
+            <a style="color: white;border-bottom: white 1px solid;user-select: none" target="_blank"
+               href="https://www.baidu.com/s?ie=utf-8&wd=%E6%80%8E%E4%B9%88%E5%AE%89%E8%A3%85apk%E5%88%B0%E7%94%B5%E8%A7%86">下载到U盘后，再插入电视进行安装>>
+            </a>
+            <div class="btn-list">
+                <a class="btn-item" target="_blank" href="/d/leanback-java-armeabi_v7a_v229_20240313.apk">
+                    <img style="user-select:none;" referrerpolicy="no-referrer" src="tv-logo.png" local="a-logo.png" alt=""/>
+                    <p>线路一下载</p>
+                </a>
+                <a class="btn-item" target="_blank" href="https://154.88.15.99/d/leanback-java-armeabi_v7a_v229_20240313.apk">
+                    <img style="margin:0 8px;user-select:none;" referrerpolicy="no-referrer" src="tv-logo.png" local="a-logo.png" alt=""/>
+                    <p>线路二下载</p>
+                </a>
+                <a class="btn-item" target="_blank" href="https://xindizhi.github.io/lsj/d/leanback-java-armeabi_v7a_v229_20240313.apk">
+                    <img style="user-select:none;" referrerpolicy="no-referrer" src="tv-logo.png" local="a-logo.png" alt=""/>
+                    <p>海外下载</p>
+                </a>
+            </div>
+            <div class="info">
+                V229 | 24MB | 2024-03-13
+            </div>
+            <div class="image">
+                <img class="pc" width="60%" src="tv.png" alt="">
+                <img class="phone"  src="tv.png" alt="">
+            </div>
+            <div class="link">
+                <div style="user-select: none">免费科学上网，视频影视免费看</div>
+                <a href="https://at.umtrack.com/K5nObC?cid=483" target="_blank" style="color:yellow;text-decoration:none;user-select: none">更多APP推荐&gt;&gt;</a>
             </div>
         </li>
         <li name="Movie" id="Movie">
-            <div style="display: flex;flex-direction: column;align-items: center;justify-content: space-between;">
-               <!--<img  style="width: 50%;" src="padtext.png">-->
-                <img class="phone-text" src="padt2.png">
-                
-                <div class="btn-a">
-                
-                    <a class="android android-m" target="_blank" href="/d/mobile-java-arm64_v8a_v229_20240314.apk" >
-                        <img class="tv-l" style="margin-right:8px;user-select:none;" referrerpolicy="no-referrer" src="a-logo.png" local="a-logo.png" alt=""/>
-                        <div class="a-text-view">
-                            <p class="p-view">线路一下载</p>
-                        </div>
-                    </a>
-                    <a class="android android-m" target="_blank" href="https://154.88.15.99/d/mobile-java-arm64_v8a_v229_20240314.apk">
-                        <img class="tv-l" style="margin-right:8px;user-select:none;" referrerpolicy="no-referrer" src="a-logo.png" local="a-logo.png" alt=""/>
-                        <div class="a-text-view">
-                            <p class="p-view">线路二下载</p>
-                        </div>
-                    </a>
-                    <a class="android android-m" target="_blank" href="https://xindizhi.github.io/lsj/d/mobile-java-arm64_v8a_v229_20240314.apk">
-                        <img class="tv-l" style="margin-right:8px;user-select:none;" referrerpolicy="no-referrer" src="a-logo.png" local="a-logo.png" alt=""/>
-                        <div class="a-text-view">
-                            <p class="p-view">海外下载</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="info-app">v229 | 24MB | 2024-03-14</div>
-                <div style="display: flex;justify-content: center" class="info-img-movie"></div>
-                <div class="bottom-view">免费科学上网，视频影视免费看</div>
-                <div class="bottom-view"><a href="https://at.umtrack.com/K5nObC?cid=483" target="_blank" style="color:yellow;text-decoration:none;">更多APP推荐&gt;&gt;</a></div>
+            <div class="title" style="display: flex;justify-content: center">
+                <img style="width: 80%" src="padt2.png" alt="">
+            </div>
+            <div class="btn-list">
+                <a class="btn-item" target="_blank" href="/d/mobile-java-arm64_v8a_v229_20240314.apk" >
+                    <img style="user-select:none;" referrerpolicy="no-referrer" src="a-logo.png" local="a-logo.png" alt=""/>
+                    <p>线路一下载</p>
+                </a>
+                <a class="btn-item" target="_blank" href="https://154.88.15.99/d/mobile-java-arm64_v8a_v229_20240314.apk" >
+                    <img style="margin:0 8px;user-select:none;" referrerpolicy="no-referrer" src="a-logo.png" local="a-logo.png" alt=""/>
+                    <p>线路二下载</p>
+                </a>
+                <a class="btn-item" target="_blank" href="https://xindizhi.github.io/lsj/d/mobile-java-arm64_v8a_v229_20240314.apk" >
+                    <img style="user-select:none;" referrerpolicy="no-referrer" src="a-logo.png" local="a-logo.png" alt=""/>
+                    <p>海外下载</p>
+                </a>
+            </div>
+            <div class="info">
+                v217 | 29MB | 2024-03-08
+            </div>
+            <div class="image">
+                <img class="pc"  src="phonep16.png" alt="">
+                <img class="phone"  src="phone12.png" alt="">
+            </div>
+            <div class="link">
+                <div style="user-select: none">免费科学上网，视频影视免费看</div>
+                <a href="https://at.umtrack.com/K5nObC?cid=483" target="_blank" style="color:yellow;text-decoration:none;user-select: none">更多APP推荐&gt;&gt;</a>
             </div>
         </li>
     </ul>
@@ -209,10 +186,10 @@
     var content = document.getElementsByClassName('content')[0]
     var contentCart = content.getElementsByTagName('li')
 
-  
+
 
     tab.addEventListener('click',function(e){
-       console.log(tabCart.length)
+        console.log(tabCart.length)
         var index = '1'
         // 找到点击项的索引值
         for(var i=0;i<tabCart.length;i++){
@@ -242,14 +219,14 @@
     window.onload=function(){
         rFunction();
     }
-    
+
     function rFunction(){
         var path = window.location.href;
         var result = path.slice(-3)
-       
-    
+
+
         if(result === 'vie'){
-           document.getElementById("movieTab").classList.add("active");
+            document.getElementById("movieTab").classList.add("active");
             document.getElementById("appTab").classList.remove("active");
             document.getElementById("tvTab").classList.remove("active");
             document.getElementById("Movie").classList.add("current");
@@ -269,11 +246,11 @@
             document.getElementById("Movie").classList.remove("current");
             document.getElementById("APP").classList.add("current");
             document.getElementById("TV").classList.remove("current");
-        } 
-        
+        }
+
         // https://lsj24.top/#TV
-    } 
-    
+    }
+
 
 
     // 选项卡 end
