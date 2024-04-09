@@ -1,297 +1,160 @@
-<!DOCTYPE html>
-<html lang="zh-cmn-Hans">
-
+<html lang="zh-cn"> 
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>XVideoS中文版APP官网下载_XVideoS中文版电视TV端下载</title>
-    <meta name="description" content="XVideoS中文版版,XV地址,XVideoS最新地址：http://XVDiZhi.com  http://HuiJiaDiZhi.com HuiJiaDiZhi.xyz HuiJiaDiZhi.top" />
-    <link rel="shortcut icon" href="../favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-    <script type="text/javascript" src="qrcode.min.js"></script>
-    <style>
-        ul, li {margin: 0;padding: 0;list-style: none;}
-        .tab:after{content: '';display:block;clear:both;}
-        a{text-decoration: none;}
-        /*!*手机界面*!*/
-        @media screen and (max-width: 1200px){
-             body{min-width:100vw;min-height:100vh;margin:0;padding: 0;display: flex;justify-content: center;align-items: center; background-image: url("./image/bg1.jpg?");background-repeat: repeat;overflow-x:hidden;}
-            .page{display: flex;flex-direction: column;justify-content: center;align-items: center}
-            .tab{position:fixed;top:1%;max-width:1200px;width: 80%;height: 100px;cursor: pointer;
-                border-bottom: 4px solid #0045d1;z-index: 3000;color: #ffffff;display:flex;justify-content: space-between;
-                font-weight: bold;font-size: 1.8em;background:black;border-radius:16px 16px 0 0;}
-            .tab .active{background-color: #0045d1;display: flex;justify-content: center;align-items: center;color: white;
-                height:100px;border-radius: 16px 16px 0 0}
-            .tab-logo{width: 42px;height: auto;margin-right: 8px}
-             #appTab,#tvTab,#movieTab{display: flex;justify-content: center;align-items: center;flex: 1;cursor: pointer;
-                 color: white;user-select: none;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
-            .content{width: 100%;display: flex;justify-content: center;align-items:center;flex-direction:column;}
-            .content li{width:100%;position:absolute;display: none;}
-            .content .current{display: flex;align-items: center;justify-content: center;flex-direction: column;top:180px;position: absolute;scroll-margin-top:180px}
-            .title{display: flex;align-items: center;justify-content: center;max-width: 1200px;width: 100%;height:auto;user-select: none;font-size: 3em;color: white;font-weight: bold;}
-            .btn-list{width: 100%;display: flex;min-width:680px;flex-direction: column;align-items: center;justify-content: center;margin:24px 0;}
-            .btn-item{display: flex;align-items: center;justify-content:center;font-size: 2.6em;font-weight: bold;color:
-                    white;background: #0045d1;border-radius: 16px;width: 80%;line-height: 20%;margin:6px 0;cursor: pointer;user-select: none;}
-            .btn-item>img{width: 42px;height: auto;margin-right: 8px}
-            .info{color: white;font-size: 1em;user-select: none}
-            .link{color: white;font-size: 1.2em;text-align: center}
-            .image{display: flex;justify-content: center;margin:24px 0;width:80%;height: auto;}
-            .pc{display: none;}
-            .phone{width:100%;height: auto;}
-            .levitate{display: none;}
-            .subtitle{font-size: 0.8em;}
-        }
-        /* !*PC界面*!*/
-        @media screen and (min-width: 1200px){
-             body{min-width:100vw;min-height:100vh;margin:0;padding: 0;display: flex;justify-content: center;align-items: center;
-            background-image: url("./image/bg1.jpg?");background-size: 100%  50%;background-repeat: repeat;overflow-x:hidden }
-            .page{width:1200px;display: flex;flex-direction: column;justify-content: center;align-items: center}
-            .tab{position:fixed;top:1%;max-width:1200px;width: 80%;height: 48px;cursor: pointer;border-bottom: 4px solid #0045d1;z-index: 3000;color: #ffffff;display:flex;justify-content: space-between;font-weight: bold;font-size: 1.4em;background:black;border-radius:16px 16px 0 0;}
-            .tab .active{background-color: #0045d1;display: flex;justify-content: center;align-items: center;color: white;height: 48px;border-radius: 16px 16px 0 0}
-            .tab-logo{width: 32px;height: auto;margin-right: 8px}
-            #appTab,#tvTab,#movieTab{display: flex;justify-content: center;align-items: center;flex: 1;cursor: pointer;color: white;user-select: none;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
-            .content{width: 100%;display: flex;justify-content: center;align-items:center;flex-direction:column;}
-            .content li{width:100%;position:absolute;display: none;}
-            .content .current{display: flex;align-items: center;justify-content: center;flex-direction: column;position:absolute;top:80px;scroll-margin-top:140px}
-            .title{text-align: center;display: flex;align-items: center;justify-content: center;max-width: 1200px;width: 100%;user-select: none;text-align: center}
-            .btn-list{width: 80%;display: flex;justify-content: center;max-width:1200px;align-items: center}
-            .btn-item{display: flex;align-items: center;justify-content:center;font-size: 1.6em;font-weight: bold;color:
-                    white;background: #0045d1;border-radius: 16px;width: 32%;line-height: 10%;margin:24px 24px;cursor: pointer;user-select: none}
-            .btn-item>img{width: 32px;height: auto;margin-right: 8px}
-            .info{color: white;font-size: 1em;user-select: none}
-            .link{color: white;font-size: 1.2em;text-align: center}
-            .image{display: flex;justify-content: center;margin:24px 0;}
-            .phone{display: none;}
-            .title{color: white;font-size: 3.8em}
-            .levitate{position:fixed;right:5%;bottom:5%;display:flex;justify-content:center;align-items:center;flex-direction:column;user-select: none;}
-            .qrimg{display:none;}
-            .levitate:hover .qrimg{opacity:1;display:block}
-            .subtitle{font-size: 0.5em;}
-        }
-    </style>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3TT4E09V8S"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-    
-        gtag('config', 'G-3TT4E09V8S');
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>XvideoS中文版|xvDiZhi.com</title>
+<meta name="description" content="XvideoS中文版,XV地址,XVideoS地址,最新地址：https://xvDiZhi.com  https://HuiJiaDiZhi.com HuiJiaDiZhi.xyz HuiJiaDiZhi.top"/>
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="apple-touch-icon.png">
+<link rel="shortcut icon" href="apple-touch-icon.png" />
+<link rel="stylesheet" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/bulma/0.9.1/css/bulma.min.css">
+<script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-2-y/jquery/3.6.0/jquery.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DZC148GWKN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DZC148GWKN');
+</script>
 </head>
-
-<body onload="rFunction()">
-    <div class="page">
-        <div class="tab">
-            <a href="#APP" id="appTab" class="active">
-                <img class="tab-logo" referrerpolicy="no-referrer" src="./image/phone-icon.png" local="tv-icon.png" alt="" />
-                影视APP/手机&平台
-            </a>
-            <a href="#TV" id="tvTab">
-                <img class="tab-logo" referrerpolicy="no-referrer" src="./image/tv-icon.png" local="tv-icon.png" alt="" />
-                电视TV
-            </a>
+<body style="text-align:center">
+<section class="hero is-black is-bold">
+    <div style="padding: 10px;">
+        
+        <div class="container">
+            <h1 class="title is-size-5"><a href="https://xvDiZhi.com/?HuanXianYe-Top" target="_blank"><font color="red">XV</font>ideoS中文版</a></h1>
+            <!-- <h2 class="subtitle">
+                <a href="https://www.xvDiZhi.com/?HuanXianYe-Top" target="_blank">https://<font color="red">XV</font>DiZhi.com</a> 
+                <a href="https://HuiJiaDiZhi.com" target="_blank">https://HuiJiaDiZhi.com</a>
+            </h2> -->
         </div>
-        <ul class="content">
-            <li class="current" name="APP" id="APP">
-                <div class="title" style="display: flex;justify-content: center;flex-direction: column">
-                    <!--<img style="width: 80%" src="./image/padt2.png" alt="">-->
-                    <div><font style="color:red">X</font>VideoS中文版 手机APP / PAD平板客户端</div>
-                    <div class="subtitle" style="color:#d77f7f;">限时免费下载</div>
-                    <div class="subtitle" style="color:#aad77f;">无需登录，国内无需翻墙</div>
-                    <div class="subtitle" style="color:#7f94d7;">超1000万部视频 1440P 1080P免费观看！</div>
-                    <div class="subtitle" style="color:#7fd3d7;">完美支持投屏到电视</div>
-                </div>
-                <div class="btn-list">
-                    <a class="btn-item" target="_blank" href="/app/d/xv-mobile_v234_20240408.apk">
-                        <img style="user-select:none;" referrerpolicy="no-referrer" src="./image/a-icon.png" local="./image/a-icon.png" alt="" />
-                        <p>线路一下载</p>
-                    </a>
-                    <a class="btn-item" target="_blank" href="https://xindizhi.github.io/xv/d/xv-mobile_v234_20240408.apk">
-                        <img style="user-select:none;" referrerpolicy="no-referrer" src="./image/a-icon.png" local="./image/a-icon.png" alt="" />
-                        <p>海外下载</p>
-                    </a>
-                    <a class="btn-item" target="_blank" href="https://xvdizhi3.top/?github">
-                        <img style="user-select:none;" referrerpolicy="no-referrer" src="./image/browser-icon.png" local="./image/tv-icon.png" alt="" />
-                        <p>网页版</p>
-                    </a>
-                </div>
-                <div class="info">
-                    v234 | 27MB | 2024-04-08
-                </div>
-                <div class="image">
-                    <img class="pc"  src="./image/app-pc.png?" alt="">
-                    <img class="phone"  src="./image/app-m.png?" alt="">
-                </div>
-                <div class="link">
-                    <div style="user-select: none">免费科学上网，视频影视免费看</div>
-                    <a href="https://at.umtrack.com/K5nObC?cid=483" target="_blank" style="color:yellow;text-decoration:none;user-select: none">更多APP推荐&gt;&gt;</a>
-                </div>
-            </li>
-            <li name="TV" id="TV">
-                <div class="title" style="display: flex;justify-content: center;flex-direction: column">
-                    <!--<img style="width: 80%" src="./image/tvtext.png" alt="">-->
-                    <div><font style="color:red">X</font>VideoS中文版 安卓电视TV客户端</div>
-                    <div class="subtitle" style="color:#d77f7f;">限时免费下载</div>
-                    <div class="subtitle" style="color:#aad77f;">无需登录，国内无需翻墙</div>
-                    <div class="subtitle" style="color:#7f94d7;">超1000万部视频 1440P 1080P免费观看！</div>
-                </div>
-                <a style="color:#d7d67f;border-bottom:#d7d67f 1px solid;user-select: none" target="_blank" href="https://www.baidu.com/s?ie=utf-8&wd=%E6%80%8E%E4%B9%88%E5%AE%89%E8%A3%85apk%E5%88%B0%E7%94%B5%E8%A7%86">下载到U盘后，再插入电视进行安装>>
-                </a>
-                <div class="btn-list">
-                    <a class="btn-item" target="_blank" href="/app/d/xv-leanback_v234_20240408.apk">
-                        <img style="user-select:none;" referrerpolicy="no-referrer" src="./image/tv-icon.png" local="./image/tv-icon.png" alt="" />
-                        <p>线路一下载</p>
-                    <a class="btn-item" target="_blank" href="https://xindizhi.github.io/xv/d/xv-leanback_v234_20240408.apk">
-                        <img style="user-select:none;" referrerpolicy="no-referrer" src="./image/tv-icon.png" local="./image/tv-icon.png" alt="" />
-                        <p>海外下载</p>
-                    </a>
-                    <a class="btn-item" target="_blank" href="https://xvdizhi3.top/?github">
-                        <img style="user-select:none;" referrerpolicy="no-referrer" src="./image/browser-icon.png" local="./image/tv-icon.png" alt="" />
-                        <p>网页版</p>
-                    </a>
-                </div>
-                <div class="info">
-                    V234 | 30MB | 2024-04-08
-                </div>
-                <div class="image">
-                    <img class="pc" src="./image/tv-pc.png?" alt="">
-                    <img class="phone"  src="./image/tv-m.png?" alt="">
-                </div>
-                <div class="link">
-                    <div style="user-select: none">免费科学上网，视频影视免费看</div>
-                    <a href="https://at.umtrack.com/K5nObC?cid=483" target="_blank" style="color:yellow;text-decoration:none;user-select: none">更多APP推荐&gt;&gt;</a>
-                </div>
-            </li>
-        </ul>
+        
     </div>
-    <div class="levitate" style="background:#313131;padding:4px 8px;color:white;font-weight:bold;border-radius:8px;cur: pointer;width:120px;text-align: center;">
-        <div class="qrimg" style="display:flex;flex-direction:column">
-            <input id="text" type="text" value=" " style="width:0px;height:0px;opacity:0" />
-            <div id="qrcode" class="qrimg" style="width:120px; height:120px; display:flex;justify-content:center;align-items:center;" />
+</section>
+<div class="container has-text-weight-bold">
+    <div class="m-2">
+        <div class="m-2">
+            <a href="https://xvDiZhi.com/?HuanXianYe-Top" target="_blank" class="box p-3 has-background-black has-text-centered has-text-white">❤️请收藏本页到浏览器</span> & 牢记<b>XV地址</b>：https://<font color="red">XV</font>DiZhi.com</a></a>
         </div>
-        扫码打开本页面
-    </div>
-</body>
-<script type="text/javascript">
-var path = document.getElementById("text").value = window.location.href
-//选项卡 begin
-var tab = document.getElementsByClassName('tab')[0]
-var tabCart = tab.getElementsByTagName('a')
-var content = document.getElementsByClassName('content')[0]
-var contentCart = content.getElementsByTagName('li')
-
-
-
-tab.addEventListener('click', function(e) {
-    console.log(tabCart.length)
-    var index = '1'
-    // 找到点击项的索引值
-    for (var i = 0; i < tabCart.length; i++) {
-        if (e.target == tabCart[i]) {
-            index = i
+        <a target="_blank" class="box p-2 has-text-centered" href="https://xvdizhi1.top/">
+            <p>https://xvdizhi<font color="red">1</font>.top <span speed="https://xvdizhi1.top/">测速中</span></p>
+        </a>
+        <a target="_blank" class="box p-2 has-text-centered" href="https://xvdizhi2.top/">
+            <p>https://xvdizhi<font color="red">2</font>.top <span speed="https://xvdizhi2.top">测速中</span></p>
+        </a>
+        <a target="_blank" class="box p-2 has-text-centered" href="https://xvdizhi3.top/">
+            <p>https://xvdizhi<font color="red">3</font>.top <span speed="https://xvdizhi3.top">测速中</span></p>
+        </a>
+        <a target="_blank" class="box p-2 has-text-centered" href="https://xvdizhi4.top/">
+            <p>https://xvdizhi<font color="red">4</font>.top <span speed="https://xvdizhi4.top">测速中</span></p>
+        </a>
+        <a target="_blank" class="box p-2 has-text-centered" href="https://xvdizhi5.top/">
+            <p>https://xvdizhi<font color="red">5</font>.top <span speed="https://xvdizhi5.top">测速中</span></p>
+        </a>
+        <small><font color="red">* 因中国移动封禁较快，当前仅少数域名支持移动访问 *</font></small><br>
+        已被封不保证能正常访问的域名：<br>
+        <s style="color:gray">https://xv2312.top/</s><br>
+        <s style="color:gray">https://xv2311.top</s><br>
+        <s style="color:gray">https://xv2310.top</s><br>
+        <s style="color:gray">https://xv2309.top</s><br>
+        <s style="color:gray">https://x202301.top</s><br>
+        <s style="color:gray">https://x202302.top</s><br>
+        <s style="color:gray">https://x202303.top</s><br>
+        <s style="color:gray">https://x202304.top</s><br>
+        <s style="color:gray">https://x202305.top</s><br>
+        <s style="color:gray">https://x202306.top</s><br>
+        <s style="color:gray">https://x202307.top</s><br>
+        <s style="color:gray">https://xv202207.top</s><br>
+        <s style="color:gray">https://xv202208.top</s><br>
+        <s style="color:gray">https://xv202209.top</s><br>
+        <s style="color:gray">https://xv202210.top</s><br>
+        <s style="color:gray">https://xv202211.top</s><br>
+        <s style="color:gray">https://xv202212.top</s><br>
+        <s style="color:gray">https://xvideos202205.xyz</s><br>
+        <s style="color:gray">https://xvideos202206.xyz</s><br>
+        <s style="color:gray">https://xvideos202207.xyz</s><br>
+        <s style="color:gray">https://xvideos202208.xyz</s><br>
+        <s style="color:gray">https://xvideos202209.xyz</s><br>
+        <s style="color:gray">https://xv202202.xyz</s><br>
+        <s style="color:gray">https://xv202203.xyz</s><br>
+        <s style="color:gray">https://xv202201.xyz</s><br>
+        <s style="color:gray">https://xv202112.xyz</s><br>
+        <s style="color:gray">https://xv202106.xyz</s><br>
+        <s style="color:gray">https://xv202105.xyz</s><br>
+        <s style="color:gray">https://xvxv11.xyz</s><br>
+        <s style="color:gray">https://xvxv12.xyz</s><br>
+        <s style="color:gray">https://xvxv13.xyz</s><br>
+        <s style="color:gray">https://xv11.xyz</s><br>
+        <s style="color:gray">https://xv12.xyz</s><br>
+        <s style="color:gray">https://xv13.xyz</s><br>
+        <s style="color:gray">https://xvxv.xyz</s><br>
+        <s style="color:gray">https://xvav.xyz</s><br>
+</div>
+<hr />
+<p>回家地址 1.1 → <a target="_blank" href="https://HuiJiaDiZhi.com">https://HuiJiaDiZhi.com</a> <span speed="https://HuiJiaDiZhi.com">测速中</span></p>
+<p>回家地址 1.2 → <a target="_blank" href="https://HuiJiaDiZhi.xyz">https://HuiJiaDiZhi.xyz</a>< <span speed="https://HuiJiaDiZhi.xyz">测速中</span>/p>
+<p>回家地址 1.3 → <a target="_blank" href="https://HuiJiaDiZhi.top">https://HuiJiaDiZhi.top</a> <span speed="https://HuiJiaDiZhi.top">测速中</span></p>
+<hr />
+<p>回家地址 2.1 → <a target="_blank" href="https://huijiadizhi.bitbucket.io/">https://huijiadizhi.bitbucket.io/</a> <span speed="https://huijiadizhi.bitbucket.io/">测速中</span></p>
+<p>回家地址 2.2 → <a target="_blank" href="https://www.ebay.com/usr/huijiadizhi">https://www.ebay.com/usr/huijiadizhi</a> <span speed="https://www.ebay.com/usr/huijiadizhi">测速中</span></p>
+<hr />
+<p><a target="_blank" href="https://huijiadizhi.com/"><img src="button.png" /></a></p>
+<p>免费成人APP → <a target="_blank" href="https://dizhi30.xyz">https://dizhi30.xyz</a> <span speed="https://dizhi30.xyz">测速中</span></p>
+<p>免费成人APP → <a target="_blank" href="https://dizhi29.xyz">https://dizhi29.xyz</a> <span speed="https://dizhi29.xyz">测速中</span></p>
+<p>免费成人APP → <a target="_blank" href="https://dizhi28.xyz">https://dizhi28.xyz</a> <span speed="https://dizhi28.xyz">测速中</span></p>
+<p>免费成人APP → <a target="_blank" href="https://dizhi27.xyz">https://dizhi27.xyz</a> <span speed="https://dizhi27.xyz">测速中</span></p>
+<p>免费成人APP → <a target="_blank" href="https://dizhi26.xyz">https://dizhi26.xyz</a> <span speed="https://dizhi26.xyz">测速中</span></p>
+<p>主站 (国内访问无法访问) → <a target="_blank" href="https://app.CAVhot.com">https://app.CAVhot.com</a> <span speed="https://app.CAVhot.com">测速中</span></p>
+<hr />
+<script>
+  var ping = 1;
+  setInterval("ping++", 1);
+  function test (i) {
+    $("span[speed]").each(function (x) {
+      if (i === x) {
+        $(this).css("color","#f0f0f0")
+        var str ="9暂无结果，请稍后刷新重测"
+        if (ping<200){
+            $(this).css("color","red")
+            str ="1极快"
         }
-    }
-    // 给点击项加上active类
-    tabCart[index].classList.add("active")
-    // 去除其他选项上的active类
-    for (var i = 0; i < tabCart.length; i++) {
-        if (tabCart[i] != tabCart[index]) {
-            tabCart[i].classList.remove("active")
-            console.log(1)
+        if (ping>300 && ping<500){
+            $(this).css("color","#efc562")
+            str ="2较快"
         }
-    }
-    // 给点击项相应的内容加上current类
-    contentCart[index].classList.add("current")
-    // 去除其他选项上的current类
-    for (var i = 0; i < contentCart.length; i++) {
-        if (contentCart[i] != contentCart[index]) {
-            contentCart[i].classList.remove("current")
-
+        if (ping>500 && ping<3000 ){
+            $(this).css("color","#9a9a9a")
+            str ="3较慢"
         }
-    }
-})
-window.onload = function() {
-    rFunction();
-}
-
-function rFunction() {
-    var path = window.location.href;
-    var result = path.slice(-3)
-
-
-    if (result === '#TV') {
-        document.getElementById("tvTab").classList.add("active");
-        document.getElementById("appTab").classList.remove("active");
-        document.getElementById("TV").classList.add("current");
-        document.getElementById("APP").classList.remove("current");
-    } else {
-        document.getElementById("APP").classList.add("active");
-        document.getElementById("TV").classList.remove("active");
-        document.getElementById("appTab").classList.add("current");
-        document.getElementById("tvTab").classList.remove("current");
-    }
-    // https://lsj24.top/#TV
-}
-
-
-
-// 选项卡 end
-//二维码生成器
-var qrcode = new QRCode(document.getElementById("qrcode"), {
-    width: 120,
-    height: 120
-});
-
-var inputField = document.getElementById("text")
-console.log(inputField)
-
-function makeCode() {
-    if (!inputField.value) {
-        inputField.focus();
-        return;
-    }
-
-    qrcode.makeCode(inputField.value);
-}
-
-makeCode();
-
-inputField.addEventListener("keydown", (e) => {
-    if (e.keyCode == 13) {
-        makeCode();
-    }
-});
-inputField.addEventListener("blur", makeCode);
-//二维码生成器end
-
-
-//邀请码
-
-//   var vConsole = new window.VConsole();
-// 获取当前页面的 URL
-// 提取邀请码
-const invitationCode = extractInvitationCode(); // 打印邀请码
-console.log(invitationCode)
-copyTextToClipboard(invitationCode);
-
-// 提取邀请码的函数
-function extractInvitationCode() {
-    // 假设邀请码在 URL 中以 query 参数的形式传递，如：?code=ABC123
-    // 可根据实际情况修改提取逻辑
-    const urlParams = new URLSearchParams(new URL(window.location.href).search);
-    return urlParams.get('code');
-}
-
-function copyTextToClipboard(text) {
-    const clipboard = new ClipboardJS('.android', {
-        text: function() {
-            return text
+        if (ping>4000 ){
+            $(this).css("color","#f0f0f0")
+            str ="4疑似无法访问，刷新本页可重测"
         }
+        $(this).text(""+str+"")
+        // $(this).text(""+str+"" + "(" + ping * 1 + "ms)") 包含延时
+        //ping=1;
+      }
     });
-    clipboard.on('success', function(e) {
-        console.log("copy sucess")
+  }
+  $(function () {
+    $("span[speed]").each(function (i) {
+      var sortid = $(this).attr("speed");
+      var self = $(this);
+      self.append('<img src="' + sortid + '?' + Math.random() + '" width="1" height="1" style="display:none" onerror=test(' + i + ') >')
     });
-}
+  });
 </script>
 
+<br><br><br><br>
+<a href="/app/?github-xv-app-download" target="_blank" style="z-index: 9999;" aria-label="XVideoS中文版">
+  <button class="telegram-btn">XVideoS中文版 APP/电视端 限时提供下载</button>
+  <style>.telegram-btn {position: fixed;bottom: 0rem;left: 0rem;background-color: #5865F2;padding: 1.5rem;height: auto;color: white;text-align: right;vertical-align: middle;border: none;font-size: 1.5rem;border-radius: 4px;}.telegram-btn svg {height: 1.5rem;position: absolute;top: 50%;left: 0;transform: translateY(-50%);}.telegram-btn:hover svg{animation:telegram-wave 560ms ease-in-out;}@keyframes telegram-wave{0%,100%{transform:translateY(-50%) rotate(0)}20%,60%{transform:translateY(-50%) rotate(-25deg)}40%,80%{transform:translateY(-50%) rotate(10deg)}}@media (max-width:500px){.telegram-btn:hover svg{animation:none}.telegram-btn svg{animation:telegram-wave 560ms ease-in-out}}</style>
+</a>
+<a href="https://discord.gg/wH7hPaVysj" target="_blank" style="z-index: 9999;" aria-label="Discord群">
+  <button class="discord-btn">Discord群</button>
+  <style>.discord-btn {position: fixed;bottom: 0rem;right: 0rem;background-color: #5865F2;padding: 1.5rem;height: auto;color: white;text-align: right;vertical-align: middle;border: none;font-size: 1.5rem;border-radius: 4px;}.discord-btn svg {height: 1.5rem;position: absolute;top: 50%;left: 0;transform: translateY(-50%);}.discord-btn:hover svg{animation:discord-wave 560ms ease-in-out;}@keyframes discord-wave{0%,100%{transform:translateY(-50%) rotate(0)}20%,60%{transform:translateY(-50%) rotate(-25deg)}40%,80%{transform:translateY(-50%) rotate(10deg)}}@media (max-width:500px){.discord-btn:hover svg{animation:none}.discord-btn svg{animation:discord-wave 560ms ease-in-out}}</style>
+</a>
+</body>
 </html>
