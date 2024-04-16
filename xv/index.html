@@ -163,13 +163,73 @@
         </script>
         <br><br><br><br>
         <a href="app/?github-xv-app-download" target="_blank" style="z-index: 9999;" aria-label="XVideoS中文版">
-            <button class="telegram-btn">XVideoS中文版【APP/电视端】下载</button>
+            <button class="download">XVideoS中文版【APP/电视端】下载</button>
             <style>
-            .telegram-btn {
+            .download {
                 position: fixed;
                 bottom: 0rem;
                 left: 0rem;
                 background-color: #b9ee1b;
+                padding: .8rem;
+                height: auto;
+                color: white;
+                text-align: right;
+                vertical-align: middle;
+                border: none;
+                font-size: 1rem;
+                border-radius: 4px;
+            }
+
+            .download svg {
+                height: 1.5rem;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+
+            .download:hover svg {
+                animation: telegram-wave 560ms ease-in-out;
+            }
+
+            @keyframes telegram-wave {
+
+                0%,
+                100% {
+                    transform: translateY(-50%) rotate(0)
+                }
+
+                20%,
+                60% {
+                    transform: translateY(-50%) rotate(-25deg)
+                }
+
+                40%,
+                80% {
+                    transform: translateY(-50%) rotate(10deg)
+                }
+            }
+
+            @media (max-width:500px) {
+                .download:hover svg {
+                    animation: none
+                }
+
+                .download svg {
+                    animation: telegram-wave 560ms ease-in-out
+                }
+            }
+            </style>
+        </a>
+
+        <a href="https://t.me/xvDiZhiBOT" target="_blank" style="z-index: 9999;" aria-label="合作">
+            <button class="telegram-btn">合作Telegram</button>
+            <style>
+            .telegram-btn {
+                position: fixed;
+                bottom: 0rem;
+                right: 0rem;
+                background-color: #1b5eee;
                 padding: .8rem;
                 height: auto;
                 color: white;
@@ -226,7 +286,7 @@
             <style>
             .discord-btn {
                 position: fixed;
-                bottom: 0rem;
+                bottom: 3rem;
                 right: 0rem;
                 background-color: #7b84e1;
                 padding: .8rem;
